@@ -3,4 +3,4 @@ sicp
 
 Repository for SICP exercises code
 
-Probably a mixture of Chicken scheme and Racket
+Will contain a mixture of Chicken Scheme and Racket code
