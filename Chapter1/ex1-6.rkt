@@ -7,5 +7,5 @@
 ; evaluating the new-if body will allways run the sqrt-iter from the else 
 ; clause 
 
-(module* main #f
+(module+ main
     (sqrt 2))

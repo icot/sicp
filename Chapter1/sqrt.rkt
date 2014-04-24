@@ -20,6 +20,6 @@
 
 (provide (all-defined-out))
 
-(module* main #f
+(module+ main
     (sqrt 2))
 
