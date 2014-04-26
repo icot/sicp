@@ -15,11 +15,11 @@
 (define (good-enough? guess x) 
   (< (abs (- (square guess) x)) 0.01))
 
-(define (sqrt x)
+(define (sqrt1 x)
   (sqrt-iter 1.0 x))
 
 (provide (all-defined-out))
 
 (module+ main
-    (sqrt 2))
+    (sqrt1 31))
 
