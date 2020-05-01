@@ -1,4 +1,4 @@
-#lang r5rs
+#lang racket
 
 (define (p) (p))
 
@@ -10,4 +10,6 @@
 (test 0 (p))
 
 ; Racket seems to use applicative order evaluation :)
+; Normal order evaluation will return 0
+; Applicative order never returns
 
