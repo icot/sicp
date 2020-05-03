@@ -29,7 +29,7 @@
 
 (module+ main
     (time (f-rec 20))
-    (time (f-rec 25))
     (time (f-iter 20))
+    (time (f-rec 25))
     (time (f-iter 25))
 )
