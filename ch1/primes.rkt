@@ -29,8 +29,6 @@
          (fast-prime? n (- times 1)))
         (else false)))
 
-(define (smallest-divisor n)
-  (find-divisor n 2))
 
 (define (divides? a b)
   ( = (remainder b a) 0))
@@ -40,8 +38,26 @@
         ((divides? test-divisor n) test-divisor)
         (else (find-divisor n (+ test-divisor 1)))))
 
+(define (smallest-divisor n)
+  (find-divisor n 2))
+
 (define (prime? n)
   (= n (smallest-divisor n)))
+
+;; Ex 1.23
+(define (next n)
+  (if (= n 2) (+ n 1) (+ n 2)))
+
+(define (find-divisor1 n test-divisor)
+  (cond ((> (square test-divisor) n) n)
+        ((divides? test-divisor n) test-divisor)
+        (else (find-divisor1 n (next test-divisor)))))
+
+(define (smallest-divisor1 n)
+  (find-divisor1 n 2))
+
+(define (prime1? n)
+  (= n (smallest-divisor1 n)))
 
 ;; Export all methods
 (provide (all-defined-out))
